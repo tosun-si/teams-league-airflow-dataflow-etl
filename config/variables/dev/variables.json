@@ -1,0 +1,27 @@
+{
+  "team_league_etl_dataflow_dag": {
+    "dag_folder": "team_league_etl_dataflow_dag",
+    "team_stats_source_bucket": "mazlum_dev",
+    "team_stats_source_object": "hot/etl/dataflow/input_teams_stats_raw.json",
+    "team_stats_dest_bucket": "mazlum_dev",
+    "team_stats_dest_object": "cold/etl/dataflow/",
+    "team_stats_job_config": {
+      "launchParameter": {
+        "containerSpecGcsPath": "gs://mazlum_dev/dataflow/templates/team_league/python/team-league-elt-dataflow-python.json",
+        "jobName": "team-league-dataflow-etl-python",
+        "parameters": {
+          "project_id": "gb-poc-373711",
+          "input_json_file": "gs://mazlum_dev/hot/etl/dataflow/input_teams_stats_raw.json",
+          "team_league_dataset": "mazlum_test",
+          "team_stats_table": "team_stat"
+        },
+        "environment": {
+          "serviceAccountEmail": "sa-dataflow-dev@gb-poc-373711.iam.gserviceaccount.com",
+          "tempLocation": "gs://mazlum_dev/dataflow/temp",
+          "stagingLocation": "gs://mazlum_dev/dataflow/staging"
+        }
+      }
+    },
+    "team_stats_job_location": "europe-west1"
+  }
+}
