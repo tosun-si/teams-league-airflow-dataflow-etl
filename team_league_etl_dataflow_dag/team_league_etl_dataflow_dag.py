@@ -23,7 +23,7 @@ with airflow.DAG(
         source_object=settings.team_stats_source_object,
         destination_bucket=settings.team_stats_dest_bucket,
         destination_object=settings.team_stats_dest_object,
-        move_object=False
+        move_object=True
     )
 
     start_dataflow_flex_template >> move_file_to_cold

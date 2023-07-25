@@ -5,6 +5,18 @@ orchestrated by Cloud Composer / Airflow
 
 ![etl_batch_pipeline_composer_dataflow_bq.png](diagram%2Fetl_batch_pipeline_composer_dataflow_bq.png)
 
+The article on this topic :
+
+https://medium.com/google-cloud/etl-batch-pipeline-with-cloud-storage-dataflow-and-bigquery-orchestrated-by-airflow-composer-896625aed586
+
+The video in English :
+
+https://youtu.be/Ps6zllstpVk
+
+The video in French :
+
+https://youtu.be/QcQxEbRjo5o
+
 ## Run job with Dataflow runner from local machine :
 
 ```bash
